@@ -56,6 +56,7 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
         handleDecrement();
       }
     };
+
     document.addEventListener("keydown", handleKeyDown);
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
