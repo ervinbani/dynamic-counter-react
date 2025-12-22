@@ -1,11 +1,11 @@
 // src/components/BlogPostPage.tsx
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { posts } from '../lib/posts';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { posts } from "../lib/posts";
 
 const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const post = posts.find(p => p.slug === slug);
+  const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
     return <h2>Post not found</h2>;
